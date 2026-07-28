@@ -1,0 +1,55 @@
+{
+  "data": {
+    "training_rows": 8000,
+    "test_rows": 2000,
+    "model_features": [
+      "Followers",
+      "EngagementRate (%)",
+      "AdSpend (GBP)",
+      "ContentQuality"
+    ],
+    "target": "Sales (Units)"
+  },
+  "selected_model": {
+    "name": "Lasso",
+    "alpha": 30.0,
+    "selection_strategy": "Expanding-window TimeSeriesSplit"
+  },
+  "random_holdout": {
+    "rmse": 2042.313,
+    "mae": 1633.233,
+    "r2": 0.475,
+    "within_20_percent": 0.6906,
+    "rmse_reduction_vs_mean_baseline": 0.2758
+  },
+  "temporal_holdout": {
+    "rmse": 1956.462,
+    "mae": 1563.634,
+    "r2": 0.504,
+    "within_20_percent": 0.7181,
+    "rmse_reduction_vs_mean_baseline": 0.2959
+  },
+  "prediction_interval": {
+    "calibration_records": 1288,
+    "radius_units": 3252,
+    "temporal_holdout_coverage": 0.909,
+    "target_coverage": 0.9
+  },
+  "permutation_importance": {
+    "Followers": 0.575,
+    "AdSpend (GBP)": 0.317,
+    "ContentQuality": 0.054,
+    "EngagementRate (%)": 0.01
+  },
+  "illustrative_prediction": {
+    "followers": "125k",
+    "engagement_rate": "3.2%",
+    "ad_spend": "GBP 5,000",
+    "content_quality": 8,
+    "predicted_sales_units": 12306,
+    "approximate_90_percent_range": [
+      9054,
+      15558
+    ]
+  }
+}

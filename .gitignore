@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local generated artifacts
+*.joblib
+campaign_predictions.csv
+*_submission.html
